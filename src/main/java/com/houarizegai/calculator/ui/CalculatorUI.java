@@ -90,6 +90,8 @@ public class CalculatorUI {
             case '*':
                 return firstNumber * secondNumber;
             case '/':
+                if (secondNumber == 0)
+                    return 0;
                 return firstNumber / secondNumber;
             case '%':
                 return firstNumber % secondNumber;
@@ -159,14 +161,10 @@ public class CalculatorUI {
         btnBack = createButton("<-", columns[1], rows[1]);
         btnBack.addActionListener(event -> {
             String str = inputScreen.getText();
-            StringBuilder str2 = new StringBuilder();
-            for (int i = 0; i < (str.length() - 1); i++) {
-                str2.append(str.charAt(i));
-            }
-            if (str2.toString().equals("")) {
-                inputScreen.setText("0");
+            if (str.length() > 1) {
+                inputScreen.setText(str.substring(0, str.length() - 1));
             } else {
-                inputScreen.setText(str2.toString());
+                inputScreen.setText("0");
             }
         });
 
@@ -453,8 +451,15 @@ public class CalculatorUI {
             if (!Pattern.matches(DOUBLE_OR_NUMBER_REGEX, inputScreen.getText()))
                 return;
 
+            double value = Double.parseDouble(inputScreen.getText());
+            if (value < 0) {
+                inputScreen.setText("Error");
+                addToDisplay = false;
+                return;
+            }
+
             if (go) {
-                typedValue = Math.sqrt(Double.parseDouble(inputScreen.getText()));
+                typedValue = Math.sqrt(value);
                 if (Pattern.matches("[-]?[\\d]+[.][0]*", String.valueOf(typedValue))) {
                     inputScreen.setText(String.valueOf((int) typedValue));
                 } else {
@@ -485,7 +490,7 @@ public class CalculatorUI {
                 selectedOperator = '^';
             }
         });
-        btnPower.setFont(new Font("Comic Sans MS", Font.PLAIN, 24));
+        btnPower.setFont(new Font(FONT_NAME, Font.PLAIN, 24));
         btnPower.setVisible(false);
 
         btnLog = createButton("ln", columns[4], rows[3]);
