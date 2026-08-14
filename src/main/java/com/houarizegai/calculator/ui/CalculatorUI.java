@@ -74,7 +74,8 @@ public class CalculatorUI {
         initCalculatorTypeSelector();
 
         initThemeSelector();
-
+//hello world
+        //hhhhhhhhhhhhhh
         window.setLayout(null);
         window.setResizable(false);
         window.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -374,6 +375,9 @@ public class CalculatorUI {
                     inputScreen.setText("3");
                 } else {
                     inputScreen.setText(inputScreen.getText() + "3");
+                }
+                else {
+                    inputScreen.setText(inputScreen.getText() + "6");
                 }
             } else {
                 inputScreen.setText("3");
