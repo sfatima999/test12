@@ -376,9 +376,6 @@ public class CalculatorUI {
                 } else {
                     inputScreen.setText(inputScreen.getText() + "3");
                 }
-                else {
-                    inputScreen.setText(inputScreen.getText() + "6");
-                }
             } else {
                 inputScreen.setText("3");
                 addToDisplay = true;
