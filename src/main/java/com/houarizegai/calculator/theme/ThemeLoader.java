@@ -18,7 +18,7 @@ public class ThemeLoader {
         throw new AssertionError("Constructor is not allowed");
     }
 //hello world
-///hii
+
     public static Map<String, Theme> loadThemes() {
         ObjectMapper mapper = new ObjectMapper(new YAMLFactory());
         mapper.findAndRegisterModules();
