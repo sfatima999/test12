@@ -24,6 +24,7 @@ public class CalculatorUI {
     private static final int BUTTON_HEIGHT = 70;
     private static final int MARGIN_X = 20;
     private static final int MARGIN_Y = 60;
+    // my branch PR 1 testing
 
     private final JFrame window;
     private JComboBox<String> comboCalculatorType;
@@ -74,7 +75,8 @@ public class CalculatorUI {
         initCalculatorTypeSelector();
 
         initThemeSelector();
-
+//hello world
+        //hhhhhhhhhhhhhh
         window.setLayout(null);
         window.setResizable(false);
         window.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -99,7 +101,7 @@ public class CalculatorUI {
                 return secondNumber;
         }
     }
-
+//test commit 
     private void initThemeSelector() {
         comboTheme = createComboBox(themesMap.keySet().toArray(new String[0]), 230, 30, "Theme");
         comboTheme.addItemListener(event -> {
@@ -556,7 +558,8 @@ public class CalculatorUI {
         btnLog.setForeground(hex2Color(theme.getTextColor()));
         btnPower.setForeground(hex2Color(theme.getTextColor()));
         btnEqual.setForeground(hex2Color(theme.getBtnEqualTextColor()));
-
+//my testing for commit
+        btnEqual.setForeground(hex2Color(theme.getBtnEqualTextColor()));
         comboCalculatorType.setBackground(hex2Color(theme.getApplicationBackground()));
         comboTheme.setBackground(hex2Color(theme.getApplicationBackground()));
         inputScreen.setBackground(hex2Color(theme.getApplicationBackground()));
