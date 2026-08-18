@@ -589,5 +589,7 @@ public class CalculatorUI {
         btnEqual.setBackground(hex2Color(theme.getBtnEqualBackground()));
         btnEqual.setBackground(hex2Color(theme.getBtnEqualBackground()));
         //conflict testing
+    
+        //hello world this will be my last commit for conflict
     }
 }
