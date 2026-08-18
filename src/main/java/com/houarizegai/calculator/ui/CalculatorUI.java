@@ -102,6 +102,7 @@ public class CalculatorUI {
         }
     }
 //test commit 
+// java
     private void initThemeSelector() {
         comboTheme = createComboBox(themesMap.keySet().toArray(new String[0]), 230, 30, "Theme");
         comboTheme.addItemListener(event -> {
@@ -585,5 +586,10 @@ public class CalculatorUI {
         btnLog.setBackground(hex2Color(theme.getOperatorBackground()));
         btnPower.setBackground(hex2Color(theme.getOperatorBackground()));
         btnEqual.setBackground(hex2Color(theme.getBtnEqualBackground()));
+        btnEqual.setBackground(hex2Color(theme.getBtnEqualBackground()));
+        btnEqual.setBackground(hex2Color(theme.getBtnEqualBackground()));
+        //conflict testing
+    
+        //hello world this will be my last commit for conflict
     }
 }
