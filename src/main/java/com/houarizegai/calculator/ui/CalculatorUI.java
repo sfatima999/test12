@@ -583,6 +583,9 @@ public class CalculatorUI {
         btnSub.setBackground(hex2Color(theme.getOperatorBackground()));
         btnAdd.setBackground(hex2Color(theme.getOperatorBackground()));
         btnRoot.setBackground(hex2Color(theme.getOperatorBackground()));
-     //hello
+        btnLog.setBackground(hex2Color(theme.getOperatorBackground()));
+        btnPower.setBackground(hex2Color(theme.getOperatorBackground()));
+        btnEqual.setBackground(hex2Color(theme.getBtnEqualBackground()));
+        btnEqual.setBackground(hex2Color(theme.getBtnEqualBackground()));
     }
 }
